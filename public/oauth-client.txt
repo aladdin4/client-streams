@@ -1,0 +1,13 @@
+
+
+OAuth client ID:-
+
+
+275317570091-q2s6klr53hsnedhmmthkvlvauhd8bfsg.apps.googleusercontent.com
+
+
+
+Secret:-
+
+
+hRSTxonC-mI0xVKzU6hAWpry
