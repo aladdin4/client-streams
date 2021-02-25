@@ -1,0 +1,34 @@
+- tools we are using in this project:
+
+    - react router
+
+    - redux
+
+    - redux dev tools:-
+        - documentations found @ https://github.com/zalmoxisus/redux-devtools-extension
+        - it's so simple to install and use, just define couple of lines 
+        - we are using middle ware so we are using those related codes
+        - it opens from the browser (chrome extension)
+
+    - redux form
+
+    - redux-thunk:-
+        - a middleware for redux
+        - used for async actions with the store
+        - respond to actionCreator() returning fn() instead of action-Obj{}
+        - the returned fn( dispatch, getState), receive those args from the store
+        - const store = createStore(rootReducer, applyMiddleware(thunk));
+        - documentations found @ https://github.com/reduxjs/redux-thunk
+
+    - axios:-
+        - Promise based HTTP client for the browser and node.js
+        - documentations found @ https://github.com/axios/axios
+        
+    - google oAuh
+    
+    - json-server
+        - for creating a server that we can use CRUD functions and api requests to get data from and write data to it.
+        - it's setup is fairly plain, just install the package, change it's script key 
+        (in the package.json file), create a db.json file and watch it 
+        - u can found it's documentation @ https://github.com/typicode/json-server where you will find the 2 lines command we need to set the server up
+        - note that: from now on you will need 2 terminal to run your app, one for the react app and the other for the server we just created

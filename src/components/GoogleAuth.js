@@ -30,7 +30,7 @@ class GoogleAuth extends React.Component {
     });
   }
 
-  //call-back function, well be called each time myAuth{} sign-in state changes
+  //call-back function, will be called each time myAuth{} sign-in state changes
   //called with bool as arg, indicating whether the user is signed-in{t} or out{f}
   onAuthChange = (signInState) => {
     if (signInState) {
@@ -65,7 +65,6 @@ class GoogleAuth extends React.Component {
       return <div>Loading .....</div>;
     } //
     else if (this.props.signInState === true) {
-      console.log(this.myAuth.currentUser.get().getBasicProfile().getId());
       return (
         <div>
           <button
@@ -75,7 +74,7 @@ class GoogleAuth extends React.Component {
             <i className="google icon" />
             Sign Out
           </button>
-          <div>user ID : {this.props.userID}</div>
+          <div>Current user ID : {this.props.userID}</div>
         </div>
       );
     } //
@@ -98,6 +97,6 @@ class GoogleAuth extends React.Component {
   }
 }
 const mapStateToProps = (state, ownProps) => {
-  return { signInState: state.auth.signIn, userID: state.auth.userID };
+  return { signInState: state.auth.signIn, userID: state.auth.currentUserID };
 };
 export default connect(mapStateToProps, { signIn, signOut })(GoogleAuth);
